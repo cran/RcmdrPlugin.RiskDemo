@@ -1,0 +1,7 @@
+# last modified 2017-08-08
+
+import(stats, Rcmdr,rgl,demography)
+importFrom(tcltk, tkbutton)
+importFrom("grDevices", "dev.new")
+importFrom("graphics", "abline", "legend", "lines", "plot", "points","polygon")
+exportPattern("^[^\\.]")

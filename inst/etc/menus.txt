@@ -1,0 +1,28 @@
+# Some Rcmdr menus for the TeachingDemos package
+# When the plug-in is loaded, these menus are merged with the standard Rcmdr menus
+
+# last modified: 12 Feb 2016 by A. Luoma
+
+#   type    menu/item      operation/parent  label                              command/menu                activation    install?
+menu    riskMenu        topMenu         ""                                      ""                          ""                      "" 
+item    topMenu         cascade         "RiskDemo"                              riskMenu                    ""                      ""
+menu	bondMenu	riskMenu	""					""			    ""            	    ""
+item    bondMenu        command		"Determine bond price"			bondCalc                    ""                      ""
+item    bondMenu	command         "Draw yield curves"                     bondDialog                  ""       		    ""
+item    riskMenu        cascade         "Bonds"                                bondMenu                    ""                      ""
+menu    demogMenu       riskMenu        ""                                      ""                          ""                      ""
+item    demogMenu       command         "Plot demographic data"                 plotDemogdata               ""                      ""
+item    demogMenu       command         "Choose demographic data"               viewDemogdata               ""                      ""
+item    demogMenu       command         "Compute lifetable"                     computeLifetable            ""                      ""
+item 	demogMenu	command		"Estimate demographic model"		estimateDemogmodel	    ""			    ""	
+item 	demogMenu	command		"Forecast demographic data"		forecastDemogdata	    ""                      ""
+item 	demogMenu	command		"Forecast population data"		forecastPopulation	    ""                      ""
+item    riskMenu	cascade 	"Demography"				demogMenu		    ""			    ""
+menu	theoryMenu	riskMenu	""					""			    ""            	    ""
+item    theoryMenu      command		"Illustrate ruin theory"		ruinDialog                  ""                      ""
+item    riskMenu        cascade         "Risk theory"                           theoryMenu                  ""                      ""
+menu	stockMenu	riskMenu	""					""			    ""            	    ""
+item    stockMenu       command		"Load stock data"			loadStockData               ""                      ""
+item    stockMenu	command         "Optimize portfolio"                    portfolioOpt                "numericP(3)"           ""
+item	stockMenu	command		"Determine stock price"			stockPrice		    ""			    ""
+item    riskMenu        cascade         "Stocks"                                stockMenu                   ""                      ""
