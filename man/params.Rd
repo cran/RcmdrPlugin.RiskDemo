@@ -30,7 +30,7 @@ Yield curve parameters from the European Central Bank (ECB), downloaded on May 2
 The parameters b0 to b3 are the beta-parameters, and t1 and t2 the tau-parameters for AAA-rated government bonds. The parameters c0 to c3 are the beta-parameters, and d1 and d2 the tau-parameters for all government bonds.
 }
 \source{
-https://www.ecb.europa.eu/stats/financial_markets_and_interest_rates/euro_area_yield_curves/html/index.en.html
+https://bit.ly/2zfs0G8
 }
 \examples{
 data(params)

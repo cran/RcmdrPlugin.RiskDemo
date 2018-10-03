@@ -38,9 +38,7 @@ Are the curves drawn for the bonds with all ratings (TRUE/FALSE)?
 \value{
 No value. Only a figure is produced.
 }
-\references{
-https://www.ecb.europa.eu/stats/financial_markets_and_interest_rates/euro_area_yield_curves/html/index.en.html
-}
+\references{https://bit.ly/2zfs0G8}
 \author{
 Arto Luoma
 }

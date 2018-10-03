@@ -8,8 +8,8 @@ Finds an optimal portfolio for long-term investments and plots a return distribu
 }
 \usage{
 portfOptim(i, symbol, yield, vol, beta, 
-  indexVol = 0.2, nStocks = 7, total = 1, balanceInt = 1, C = 0.05, 
-  riskProportion = 1, riskfreeRate = 0, sim = FALSE)
+  indexVol = 0.2, nStocks = 7, total = 1, balanceInt = 1, 
+  C = 0.05, riskProportion = 1, riskfreeRate = 0, sim = FALSE)
 }
 \arguments{
   \item{i}{

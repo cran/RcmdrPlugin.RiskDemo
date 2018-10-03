@@ -21,6 +21,8 @@
 \alias{ruinDialog}
 \alias{stockPrice}
 \alias{viewDemogdata}
+\alias{plot.lca}
+\alias{print.lca}
 \description{Internal RiskLab objects.}
 \details{These are not to be called by the user.}
 \keyword{internal}

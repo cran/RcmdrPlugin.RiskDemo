@@ -12,8 +12,8 @@ R Commander plug-in to demonstrate various actuarial and financial risks. It inc
 \tabular{ll}{
 Package: \tab RcmdrPlugin.RiskDemo\cr
 Type: \tab Package\cr
-Version: \tab 1.9\cr
-Date: \tab 2017-08-09\cr
+Version: \tab 2.0\cr
+Date: \tab 2018-10-3\cr
 License: \tab GPL (>= 2)\cr
 LazyLoad: \tab yes\cr
 }

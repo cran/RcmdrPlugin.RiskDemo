@@ -6,8 +6,8 @@
 This function plots simulation paths of a surpluss process. The claims are assumed to arrive according to a Poisson process and the claim sizes are assumed to be gamma distributed.
 }
 \usage{
-drawRuin(nsim = 10, Tup = 10, U0 = 1000, theta = 0.01, lambda = 100, 
-  alpha = 1, beta = 0.1)
+drawRuin(nsim = 10, Tup = 10, U0 = 1000, theta = 0.01, 
+         lambda = 100, alpha = 1, beta = 0.1)
 }
 \arguments{
   \item{nsim}{

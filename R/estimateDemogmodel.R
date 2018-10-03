@@ -31,7 +31,7 @@ function () {
     putDialog ("estimateDemogmodel", list (initial.input=input, initial.out= out,
     initial.method=method, initial.series = series, initial.ages = ages, initial.years = years, initial.res=res, initial.print=print,initial.plot=plot))
     closeDialog()
-    doItAndPrint('data(fin')
+    doItAndPrint('data(fin)')
     #dData <- paste('countries.mort[[',xi,']]',sep="")
     
     years <- paste('c(',years,')[c(',years,') %in% ',input,'$year]',sep="")

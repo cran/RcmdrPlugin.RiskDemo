@@ -21,7 +21,7 @@ function(T0,U0=NULL,theta=NULL,eps=NULL,lambda,alpha,beta){
      if(!is.null(theta)){
          P <- (1+theta)*lambda*alpha/beta
          R <- solveLund(alpha,beta,theta)
-         if(R < 1e-6) return("Safety loading is too small")
+         if(R < 1e-6) stop("Safety loading is too small")
          muTinv <- cDiff(R,lambda=lambda,alpha=alpha,beta=beta,P=P)
          if(is.null(eps)){
              x <- min(T0/U0,1/muTinv)
@@ -34,6 +34,7 @@ function(T0,U0=NULL,theta=NULL,eps=NULL,lambda,alpha,beta){
          }
      }else{
              R <- -log(eps)/U0
+             if(R >= beta) stop("Initial capital is too small.")
              Pup <- lambda/R*((beta/(beta-R))^alpha-1)
              #Plow <- lambda*alpha/beta-U0/T0
              Plow <- lambda*alpha/beta
@@ -42,7 +43,7 @@ function(T0,U0=NULL,theta=NULL,eps=NULL,lambda,alpha,beta){
              if(x>=1/muTinv){P <- Pup}else{
                y <- -log(eps)/T0
                if(ccNuY(Plow,nu=1/x,lambda=lambda,alpha=alpha,beta=beta,y=y)>0)
-                 return("No positive solution for risk loading")
+                 stop("No positive solution for risk loading")
                P <- uniroot(ccNuY,nu=1/x,lower=Plow,upper=Pup,lambda=lambda,alpha=alpha,beta=beta,y=y)$root
              }
              theta <- beta*P/(alpha*lambda)-1

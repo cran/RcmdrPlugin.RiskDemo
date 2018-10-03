@@ -5,19 +5,7 @@ function () {
                     initial.nsim=10,initial.Tup=10)
   dialog.values <- getDialog ("ruinDialog", defaults)
   initializeDialog(title = gettextRcmdr("Illustrating classical ruin theory"))
-  
-  
-  lambdaVariable <- tclVar(dialog.values$initial.lambda)
-  alphaVariable <- tclVar(dialog.values$initial.alpha)
-  betaVariable <- tclVar(dialog.values$initial.beta)
-  U0Variable <- tclVar(dialog.values$initial.U0)
-  epsVariable <- tclVar(dialog.values$initial.eps)
-  thetaVariable <- tclVar(dialog.values$initial.theta)
-  T0Variable <- tclVar(dialog.values$initial.T0)
-  nsimVariable <- tclVar(dialog.values$initial.nsim)
-  TupVariable <- tclVar(dialog.values$initial.Tup)
-  ans <- NULL
-  
+
   onOK <- function() {
     lambda <- tclvalue(lambdaVariable)
     alpha <- tclvalue(alphaVariable)
@@ -55,8 +43,8 @@ function () {
     #if(theta!="" && U0!=""){
     #  doItAndPrint(paste("drawRuin(nsim=",nsim,",Tup=",Tup,",U0=",U0,",theta=",theta,
     #                "/100,lambda=",lambda,",alpha=",alpha,",beta=",beta,")",sep=""))}
-    doItAndPrint(paste("drawRuin(nsim=",nsim,",Tup=",Tup,",U0=",ans$initialCapital,",theta=",ans$safetyLoading,
-                       ",lambda=",lambda,",alpha=",alpha,",beta=",beta,")",sep=""))
+    doItAndPrint(paste("drawRuin(nsim=",nsim,",Tup=",Tup,", U0=ans$initialCapital, theta=ans$safetyLoading,
+                       lambda=", lambda,",alpha=",alpha,",beta=",beta,")",sep=""))
     tkdestroy(top)
     tkfocus(CommanderWindow())
   }

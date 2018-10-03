@@ -1,0 +1,10 @@
+v2.0
+- changed package 'demography' from Imports to Depends in DESCRIPTION file 
+- copied 'plot.lca' from package 'demography' and modified it to reflect a change 
+  in ftsa::plot.ftsm (ftsa_5.0)
+- copied 'print.lca' from package 'demography' to avoid using 'e1071:::print.lca'
+- registered 'plot.lca' and 'print.lca' as S3 methods
+- a bug fix in 'RuinDialog': parameters U0 and theta failed to pass to 'drawRuin'
+- added error messages to functions 'computeRuin' and 'computeRuinFinate' if the user 
+  provides a too small initial capital U0  
+- shortened some lines in documentation

@@ -7,7 +7,8 @@ Ruin probability computation with finite time horizon
 This function uses classical ruin theory to compute either ruin probability, safety loading or initial capital, given two of them. The time horizon is finite. Gamma distribution is used to model claim sizes.
 }
 \usage{
-computeRuinFinite(T0, U0 = NULL, theta = NULL, eps = NULL, lambda, alpha, beta)
+computeRuinFinite(T0, U0 = NULL, theta = NULL, eps = NULL, lambda, 
+                  alpha, beta)
 }
 \arguments{
   \item{T0}{

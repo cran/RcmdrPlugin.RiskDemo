@@ -7,7 +7,8 @@ Bond price as a function of interest rate.
 This function plots the bond price as a function of interest rate. It also shows, using dotted lines, the yield to maturity rate corresponding to the face value, and the flat price corresponding to the yield to maturity. 
 }
 \usage{
-bondFigure(buyDate, matDate, rateCoupon, yieldToMat = NULL, bondPr = NULL, nPay)
+bondFigure(buyDate, matDate, rateCoupon, yieldToMat = NULL, 
+           bondPr = NULL, nPay)
 }
 \arguments{
   \item{buyDate}{
@@ -45,7 +46,8 @@ Arto Luoma <arto.luoma@wippies.com>
 \code{\link{bondPrice}}, \code{\link{solveYield}}
 }
 \examples{
-bondFigure("2012-7-31","2018-7-31",rateCoupon=0.0225,yieldToMat=0.0079,nPay=2)
+bondFigure("2012-7-31","2018-7-31",rateCoupon=0.0225,yieldToMat=0.0079,
+           nPay=2)
 bondFigure("2012-7-31","2018-7-31",rateCoupon=0.0225,bondPr=90,nPay=2)
 }
 
