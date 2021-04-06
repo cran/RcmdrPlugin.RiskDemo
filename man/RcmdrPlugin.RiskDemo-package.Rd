@@ -6,14 +6,14 @@
 R Commander Plug-in for Risk Demonstration
 }
 \description{
-R Commander plug-in to demonstrate various actuarial and financial risks. It includes valuation of bonds and stocks, portfolio optimization, classical ruin theory and demography. 
+R Commander plug-in to demonstrate various actuarial and financial risks. It includes valuation of bonds and stocks, portfolio optimization, classical ruin theory, demography and epidemic. 
 }
 \details{
 \tabular{ll}{
 Package: \tab RcmdrPlugin.RiskDemo\cr
 Type: \tab Package\cr
-Version: \tab 2.0\cr
-Date: \tab 2018-10-3\cr
+Version: \tab 3.0\cr
+Date: \tab 2021-04-03\cr
 License: \tab GPL (>= 2)\cr
 LazyLoad: \tab yes\cr
 }

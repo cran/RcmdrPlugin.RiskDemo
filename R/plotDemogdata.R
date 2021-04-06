@@ -1,8 +1,8 @@
 plotDemogdata <-
 function () {
-  defaults <- list (initial.x = 10, initial.type="functions", initial.datatype="rate",
+  defaults <- list (initial.x = 1, initial.type="functions", initial.datatype="rate",
            initial.total = 1, initial.female=0, initial.male=0,
-           initial.ages = "0:110",initial.years = "1878:2015",initial.trans="TRUE")
+           initial.ages = "0:110",initial.years = "1878:2019",initial.trans="TRUE")
   dialog.values <- getDialog ("plotDemogdata", defaults)  
   initializeDialog(title = gettextRcmdr("Plot demographic data"))
   #xBox <- variableListBox(top, Numeric(), title = gettextRcmdr("Variable (pick one)"),initialSelection = varPosn(dialog.values$initial.x, "numeric"))
@@ -16,13 +16,9 @@ function () {
   femaleVariable <- tclVar(dialog.values$initial.female)
   maleVariable <- tclVar(dialog.values$initial.male)
   
-  countries <- c("Australia","Austria","Belarus","Belgia","Bulgaria","Canada",
-                 "Chile","Czech Republic","Denmark","Estonia","Finland","France",
-                 "Germany","Greece","Hungary","Iceland","Ireland","Israel","Italy",
-                 "Japan", "Latvia","Lithuania","Luxenbourg","Netherlands",
-                 "New Zealand","Norway","Poland","Portugal","Russia","Slovakia",
-                 "Slovenia","Spain","Sweden","Switzerland","Taiwan","U.K.","U.S.A.",
-                 "Ukraine")
+  utils::data(countries.mort)
+  countries <- sapply(countries.mort,function(x) x$label)
+  
   
   dataFrame <- tkframe(top)
   xBox <- variableListBox(dataFrame, countries, title = gettextRcmdr("Country (pick one or more)"),initialSelection =  dialog.values$initial.x,

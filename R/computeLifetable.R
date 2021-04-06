@@ -2,7 +2,7 @@ computeLifetable <-
 function () {
   defaults <- list (initial.input = 'fin', initial.out="fin.lt",
            initial.series = "total", 
-           initial.ages = "0:110",initial.years = "1878:2015",initial.print=0,
+           initial.ages = "0:110",initial.years = "1878:2019",initial.print=0,
            initial.plot=0)
   dialog.values <- getDialog ("computeLifetable", defaults)  
   initializeDialog(title = gettextRcmdr("Compute life table"))
@@ -30,7 +30,7 @@ function () {
     doItAndPrint('data(fin)')
     
     years <- paste('c(',years,')[c(',years,') %in% ',input,'$year]',sep="")
-    doItAndPrint(paste(out,' <- lifetable(',input,',series="',series,'",years=',years,',ages=c(',ages,'))',sep=""))
+    doItAndPrint(paste(out,' <- demography::lifetable(',input,',series="',series,'",years=',years,',ages=c(',ages,'))',sep=""))
     
     if(print==1){
       doItAndPrint(paste('print(',out,')',sep=""))

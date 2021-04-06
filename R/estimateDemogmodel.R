@@ -2,7 +2,7 @@ estimateDemogmodel <-
 function () {
   defaults <- list (initial.input = 'fin', initial.out="fin.lca", initial.method="lca",
            initial.series = "total", 
-           initial.ages = "0:100",initial.years = "1950:2015",initial.res=0,initial.print=0,
+           initial.ages = "0:100",initial.years = "1950:2019",initial.res=0,initial.print=0,
            initial.plot=0)
   dialog.values <- getDialog ("estimateDemogmodel", defaults)  
   initializeDialog(title = gettextRcmdr("Estimating a demographic model"))
@@ -37,13 +37,13 @@ function () {
     years <- paste('c(',years,')[c(',years,') %in% ',input,'$year]',sep="")
  
     if(method=="lca"){
-       doItAndPrint(paste(out,' <- lca(',input,',series="',series,'",years=',years,
+       doItAndPrint(paste(out,' <- demography::lca(',input,',series="',series,'",years=',years,
        ',ages=c(',ages,'),interpolate=TRUE)',sep=""))}else
     if(method=="bms"){
-       doItAndPrint(paste(out,' <- bms(',input,',series="',series,'",years=',years,
+       doItAndPrint(paste(out,' <- demography::bms(',input,',series="',series,'",years=',years,
        ',ages=c(',ages,'),interpolate=TRUE)',sep=""))}else
     if(method=="fdm"){
-       doItAndPrint(paste(out,' <- fdm(',input,',series="',series,
+       doItAndPrint(paste(out,' <- demography::fdm(',input,',series="',series,
        '",ages=c(',ages,'))',sep=""))
     }
   

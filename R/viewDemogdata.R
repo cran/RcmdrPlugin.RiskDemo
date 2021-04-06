@@ -1,8 +1,8 @@
 viewDemogdata <-
 function () {
-  defaults <- list (initial.x = 10, initial.datatype="rate",
+  defaults <- list (initial.x = 1, initial.datatype="rate",
            initial.series = "total", 
-           initial.ages = "0:110",initial.years = "1878:2015",initial.out="fin")
+           initial.ages = "0:110",initial.years = "1878:2019",initial.out="fin")
   dialog.values <- getDialog ("viewDemogdata", defaults)  
   initializeDialog(title = gettextRcmdr("Choose demographic data"))
   #xBox <- variableListBox(top, Numeric(), title = gettextRcmdr("Variable (pick one)"),initialSelection = varPosn(dialog.values$initial.x, "numeric"))
@@ -14,13 +14,9 @@ function () {
   yearsVariable <- tclVar(dialog.values$initial.years)
   outVariable <- tclVar(dialog.values$initial.out)
   
-  countries <- c("Australia","Austria","Belarus","Belgia","Bulgaria","Canada",
-                 "Chile","Czech Republic","Denmark","Estonia","Finland","France",
-                 "Germany","Greece","Hungary","Iceland","Ireland","Israel","Italy",
-                 "Japan", "Latvia","Lithuania","Luxenbourg","Netherlands",
-                 "New Zealand","Norway","Poland","Portugal","Russia","Slovakia",
-                 "Slovenia","Spain","Sweden","Switzerland","Taiwan","U.K.","U.S.A.",
-                 "Ukraine")
+  utils::data(countries.mort)
+  countries <- sapply(countries.mort,function(x) x$label)
+  
   
   dataFrame <- tkframe(top)
   xBox <- variableListBox(dataFrame, countries, title = gettextRcmdr("Country (pick one)"),initialSelection =  dialog.values$initial.x)
@@ -41,7 +37,7 @@ function () {
     closeDialog()
     doItAndPrint('data(countries.mort)')
     dData <- paste('countries.mort[[',xi,']]',sep="")
-    doItAndPrint(paste(out,' <- extract.years(extract.ages(',dData,',ages=c(',ages,
+    doItAndPrint(paste(out,' <- demography::extract.years(demography::extract.ages(',dData,',ages=c(',ages,
          '),combine.upper=FALSE),years=c(',years,'))',sep=""))
     
     doItAndPrint(paste('View(',out,'$',datatype,

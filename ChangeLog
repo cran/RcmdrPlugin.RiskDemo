@@ -1,10 +1,30 @@
 v2.0
-- changed package 'demography' from Imports to Depends in DESCRIPTION file 
-- copied 'plot.lca' from package 'demography' and modified it to reflect a change 
-  in ftsa::plot.ftsm (ftsa_5.0)
 - copied 'print.lca' from package 'demography' to avoid using 'e1071:::print.lca'
-- registered 'plot.lca' and 'print.lca' as S3 methods
+- copied 'plot.lca' from package 'demography' and modified it to reflect a change 
+  in ftsa:::plot.ftsm (ftsa_5.0)
+- registered print.lca and plot.lca as S3 methods
 - a bug fix in 'RuinDialog': parameters U0 and theta failed to pass to 'drawRuin'
 - added error messages to functions 'computeRuin' and 'computeRuinFinate' if the user 
-  provides a too small initial capital U0  
-- shortened some lines in documentation
+  provides a too small initial capital U0 
+v3.0
+- added the possibility to download, visualize and forecast epidemic data (especially COVID-19)
+- added menu item 'Epidemic' under 'RiskDemo'
+- added menu items 'Updating COVID-19 data', 'Incidence curves',  
+  'Incidence curves (Finland)', 'Cases and deaths', 'Cases and deaths (Finland)',
+  'Testing', 'Forecasting (Finland)' under 'Epidemic' and the corresponding dialogs
+- added the functions drawIncidence, drawIncidenceFin, drawBars, drawBarsFin, drawTests,
+  drawPositiveRate, plotForecast and plotR to plot various graphs related to an epidemic
+- added the functions loglikCovid and covidSmooth to fit a simple linear state space model
+  that is used to forecast the epidemic and to estimate the effective reproduction number R.
+- added data sets 'dataCovid', 'dataCovidFin' and 'popRegionsFin'
+- updated the data sets 'params' (bond data) and 'countries.mort', 'fin', 'fin.lca', 'fin.fcast'
+  (mortality data). The data set 'countries.mort' is now limited to 10 countries and to the precision 
+  of 3 digits
+- removed the unnecessary data sets 'countries' and 'countries.abbr'
+- removed the menu item 'Load stock data' under 'Stocks' and the related functions 'loadStockData'
+  and 'getStockList' because they did not work anymore due to a change of interface in Kauppalehti's 
+  web portal
+- changed the R dependency into version 3.5.0  
+- added ggplot2, dplyr, scales, zoo and data.table to Imports
+- moved rgl to Suggests
+

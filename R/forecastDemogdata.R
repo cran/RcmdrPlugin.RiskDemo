@@ -30,7 +30,7 @@ function () {
     closeDialog()
     
     doItAndPrint('data(fin.lca)')
-    doItAndPrint(paste(out,' <- forecast(',input,',h=',h,',jumpchoice="',jumpchoice,
+    doItAndPrint(paste(out,' <- forecast::forecast(',input,',h=',h,',jumpchoice="',jumpchoice,
     '",level=',level,')',sep=""))
     
     if(func==1){

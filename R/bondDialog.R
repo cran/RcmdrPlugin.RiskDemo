@@ -11,7 +11,7 @@ function () {
   AAAVariable <- tclVar(dialog.values$initial.AAA)
   allVariable <- tclVar(dialog.values$initial.all)
 
-  years <- c("None",2004:2017)
+  years <- c("None",2004:2021)
   months <- c("Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec")
   days <- 1:31
   dataFrame <- tkframe(top)
