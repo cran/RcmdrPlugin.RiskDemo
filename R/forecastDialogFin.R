@@ -13,7 +13,7 @@ function () {
     intervalVariable <- tclVar(dialog.values$initial.interval)
     horizonVariable <- tclVar(dialog.values$initial.horizon)
     
-    years <- c("None",2020:2022)
+    years <- c("None",2020:2024)
     months <- c("Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec")
     days <- 1:31
     

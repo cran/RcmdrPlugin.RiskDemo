@@ -11,7 +11,7 @@ function () {
   AAAVariable <- tclVar(dialog.values$initial.AAA)
   allVariable <- tclVar(dialog.values$initial.all)
 
-  years <- c("None",2004:2021)
+  years <- c("None",2004:2023)
   months <- c("Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec")
   days <- 1:31
   dataFrame <- tkframe(top)
@@ -36,14 +36,14 @@ function () {
 
   onOK <- function() {
     year1 <- getSelection(year1Box)
-    year1.i <- (0:12)[year1==years]
+    year1.i <- (0:(length(years)-1))[year1==years]
     month1 <- (1:12)[getSelection(month1Box)==months]
     month1.i <- month1-1
     day1 <- getSelection(day1Box)
     day1.i <- day1-1
 
     year2 <- getSelection(year2Box)
-    year2.i <- (0:12)[year2==years]
+    year2.i <- (0:(length(years)-1))[year2==years]
     month2 <- (1:12)[getSelection(month2Box)==months]
     month2.i <- month2-1
     day2 <- getSelection(day2Box)

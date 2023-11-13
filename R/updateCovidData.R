@@ -1,6 +1,6 @@
 updateCovidData <-
 function () {
-    defaults <- list (initial.intname = 'dataCovid', initial.finname = 'dataCovidFin', initial.popname = 'popRegionsFin', initial.int = TRUE, initial.fin = TRUE, 
+    defaults <- list (initial.intname = 'dataCovid2', initial.finname = 'dataCovidFin2', initial.popname = 'popRegionsFin2', initial.int = TRUE, initial.fin = TRUE, 
                       initial.pop = TRUE)
     dialog.values <- getDialog ("updateCovidData", defaults)  
     initializeDialog(title = gettextRcmdr("Updating COVID-19 data"))
@@ -38,7 +38,7 @@ function () {
         doItAndPrint(paste0(intname,'$date <- as.Date(',intname,'$date)'))
       }
       if(fin=="1"){
-        doItAndPrint(paste0(finname,' <- read.csv2("https://sampo.thl.fi/pivot/prod/fi/epirapo/covid19case/fact_epirapo_covid19case.csv?row=hcdmunicipality2020-445222&column=dateweek20200101-508804L")'))
+        doItAndPrint(paste0(finname,' <- read.csv2("https://sampo.thl.fi/pivot/prod/fi/epirapo/covid19case/fact_epirapo_covid19case.csv?row=hcdmunicipality2020-445222&column=dateweek20200101-508775L")'))
         doItAndPrint(paste0(finname,'$Aika <- as.Date(',finname,'$Aika)'))                 
       } 
       if(pop=="1")

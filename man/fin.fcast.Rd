@@ -5,7 +5,7 @@
 Finnish mortality forecast
 }
 \description{
-Finnish mortality forecast 50 years ahead (2016-2065) for 0 - 100 years old. The forecast is 
+Finnish mortality forecast 50 years ahead (2023-2072) for 0 - 100 years old. The forecast is 
 based on an estimated Lee-Carter model. The kt coefficients were forecast using a random walk with drift. Fitted rates were used as the starting value. 
 }
 \usage{data("fin.fcast")}

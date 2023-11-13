@@ -18,7 +18,7 @@ This is part of the  countries.mort data (countries.mort[[11]]).
   object of class demogdata
 }
 \source{
-Human Mortality Database. University of California, Berkeley (USA), and Max Planck Institute for Demographic Research (Germany). Available at www.mortality.org or www.humanmortality.de (data downloaded May 3, 2017).
+HMD. Human Mortality Database. Max Planck Institute for Demographic Research (Germany), University of California, Berkeley (USA), and French Institute for Demographic Studies (France). Available at www.mortality.org. (Data downloaded Nov 13, 2023.)
 }
 \examples{
 data(fin)

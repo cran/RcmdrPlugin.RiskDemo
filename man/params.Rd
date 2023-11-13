@@ -5,11 +5,11 @@
 Yield curve parameter data
 }
 \description{
-Yield curve parameters from the European Central Bank (ECB), downloaded on March 24, 2021
+Yield curve parameters from the European Central Bank (ECB), downloaded on Nov 4, 2023
 }
 \usage{data("params")}
 \format{
-  A data frame with 4229 observations on the following 13 variables.
+  A data frame with 4902 observations on the following 13 variables.
   \describe{
     \item{\code{date}}{a Date}
     \item{\code{b0}}{a numeric vector}

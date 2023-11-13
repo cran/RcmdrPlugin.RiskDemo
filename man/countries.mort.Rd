@@ -13,7 +13,7 @@ Human Mortality Database. The data are rounded to three significant digits and i
  List of objects of class demogdata.
  }
 \source{
-Human Mortality Database. University of California, Berkeley (USA), and Max Planck Institute for Demographic Research (Germany). Available at www.mortality.org or www.humanmortality.de (data downloaded March 22, 2021). 
+HMD. Human Mortality Database. Max Planck Institute for Demographic Research (Germany), University of California, Berkeley (USA), and French Institute for Demographic Studies (France). Available at www.mortality.org. (Data downloaded Nov 13, 2023.)
 }
 \examples{
 data(countries.mort)

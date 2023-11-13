@@ -2,7 +2,7 @@ estimateDemogmodel <-
 function () {
   defaults <- list (initial.input = 'fin', initial.out="fin.lca", initial.method="lca",
            initial.series = "total", 
-           initial.ages = "0:100",initial.years = "1950:2019",initial.res=0,initial.print=0,
+           initial.ages = "0:100",initial.years = "1950:2022",initial.res=0,initial.print=0,
            initial.plot=0)
   dialog.values <- getDialog ("estimateDemogmodel", defaults)  
   initializeDialog(title = gettextRcmdr("Estimating a demographic model"))

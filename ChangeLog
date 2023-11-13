@@ -27,4 +27,10 @@ v3.0
 - changed the R dependency into version 3.5.0  
 - added ggplot2, dplyr, scales, zoo and data.table to Imports
 - moved rgl to Suggests
-
+v3.1
+- replaced the euro symbol with its abbreviation (EUR) in the functions 'bondFigure' and 'drawRuin',
+  because of a conversion failure
+- updated two links in function 'updateCovidData' 
+- updated data sets 'params' (bond data) and 'countries.mort', 'fin', 'fin.lca', 'fin.fcast'
+  (mortality data).
+- updated year range in 'bondDialog' and epidemic and demographic dialogs

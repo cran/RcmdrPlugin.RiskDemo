@@ -2,7 +2,7 @@ plotDemogdata <-
 function () {
   defaults <- list (initial.x = 1, initial.type="functions", initial.datatype="rate",
            initial.total = 1, initial.female=0, initial.male=0,
-           initial.ages = "0:110",initial.years = "1878:2019",initial.trans="TRUE")
+           initial.ages = "0:110",initial.years = "1878:2022",initial.trans="TRUE")
   dialog.values <- getDialog ("plotDemogdata", defaults)  
   initializeDialog(title = gettextRcmdr("Plot demographic data"))
   #xBox <- variableListBox(top, Numeric(), title = gettextRcmdr("Variable (pick one)"),initialSelection = varPosn(dialog.values$initial.x, "numeric"))

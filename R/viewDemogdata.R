@@ -2,7 +2,7 @@ viewDemogdata <-
 function () {
   defaults <- list (initial.x = 1, initial.datatype="rate",
            initial.series = "total", 
-           initial.ages = "0:110",initial.years = "1878:2019",initial.out="fin")
+           initial.ages = "0:110",initial.years = "1878:2022",initial.out="fin")
   dialog.values <- getDialog ("viewDemogdata", defaults)  
   initializeDialog(title = gettextRcmdr("Choose demographic data"))
   #xBox <- variableListBox(top, Numeric(), title = gettextRcmdr("Variable (pick one)"),initialSelection = varPosn(dialog.values$initial.x, "numeric"))

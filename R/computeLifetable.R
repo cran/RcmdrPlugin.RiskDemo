@@ -2,7 +2,7 @@ computeLifetable <-
 function () {
   defaults <- list (initial.input = 'fin', initial.out="fin.lt",
            initial.series = "total", 
-           initial.ages = "0:110",initial.years = "1878:2019",initial.print=0,
+           initial.ages = "0:110",initial.years = "1878:2022",initial.print=0,
            initial.plot=0)
   dialog.values <- getDialog ("computeLifetable", defaults)  
   initializeDialog(title = gettextRcmdr("Compute life table"))

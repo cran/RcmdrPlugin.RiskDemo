@@ -11,7 +11,7 @@ function(buyDate,matDate,rateCoupon,yieldToMat=NULL,bondPr=NULL,nPay){
    y <- numeric(length(x))
    for(i in 1:length(x))
       y[i] <- bondPrice(buyDate,matDate,rateCoupon,yieldToMat=x[i],nPay)$flatPrice
-   plot(100*x,y,type="l",xlab="Interest Rate (%)",ylab="Bond Price (\u20AC)",xaxs="i")
+   plot(100*x,y,type="l",xlab="Interest Rate (%)",ylab="Bond Price (EUR)",xaxs="i")
    lines(c(0,100*rateCoupon),c(100,100),lty=2)
    lines(c(100*rateCoupon,100*rateCoupon),c(0,100),lty=2)
    lines(c(0,100*yieldToMat),c(bP,bP),lty=2)

@@ -5,7 +5,7 @@
 Lee-Carter model fit for Finnish data
 }
 \description{Lee-Carter model fit obtained by function "lca" of package "demography". The fit
-is based on Finnish mortality data for ages from 0 to 100 and years from 1950 to 2015. 
+is based on Finnish mortality data for ages from 0 to 100 and years from 1950 to 2022. 
 }
 \usage{data("fin.lca")}
 \format{
