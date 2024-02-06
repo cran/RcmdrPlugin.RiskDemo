@@ -34,3 +34,5 @@ v3.1
 - updated data sets 'params' (bond data) and 'countries.mort', 'fin', 'fin.lca', 'fin.fcast'
   (mortality data).
 - updated year range in 'bondDialog' and epidemic and demographic dialogs
+v3.2
+- replaced blanket imports with importFrom directives to avoid unnecessary conflicts in function names
